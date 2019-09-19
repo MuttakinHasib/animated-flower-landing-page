@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'EB Garamond', serif;
+}
+
+.portfolio {
+  color: #fff;
+  background: radial-gradient(#2b3760, #0b1023);
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.portfolio .photographer2,
+.portfolio .photographer3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portfolio nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+.portfolio nav .logo {
+  font-size: 35px;
+  color: #fff;
+  z-index: 2;
+}
+
+.portfolio nav .hamburger {
+  width: 40px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.portfolio nav .nav-open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #fff;
+  z-index: 1;
+  color: #000;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 1fr 1fr 5%;
+      grid-template-columns: 5% 1fr 1fr 5%;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.portfolio nav .nav-open .contact {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.portfolio nav .nav-open h3 {
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+
+.portfolio nav .nav-open h3 p {
+  font-size: 18px;
+}
+
+.portfolio nav .nav-open .social a {
+  margin-right: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.portfolio nav .nav-open .social .fb {
+  color: #4267B2;
+}
+
+.portfolio nav .nav-open .social .tw {
+  color: #28AAE1;
+}
+
+.portfolio nav .nav-open .social .git {
+  color: #24292E;
+}
+
+.portfolio .page {
+  min-height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 1fr 1fr 1fr 5%;
+      grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.portfolio .page .details {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.portfolio .page .details h1 {
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.portfolio .page .details h2 {
+  font-size: 42px;
+  padding: 15px 0;
+  font-weight: 400;
+}
+
+.portfolio .page .details p {
+  font-size: 24px;
+  padding: 15px 0 50px 0;
+}
+
+.portfolio .page .hero {
+  width: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+}
+
+.portfolio .page .hero:hover .hero-left {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.portfolio .page .hero:hover .hero-right {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.portfolio .page .hero img {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.portfolio .page .hero .hero-left {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
+.portfolio .page .hero .hero-right {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+.portfolio .pages {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.portfolio .pages .dot-active::before {
+  background: #f36;
+}
+
+.portfolio .pages div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio .pages div:hover::before {
+  background: #f36;
+}
+
+.portfolio .pages div h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 20px 65px 20px 0;
+}
+
+.portfolio .pages div::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #eee;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */

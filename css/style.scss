@@ -1,0 +1,220 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$colorWhite: #fff;
+$colorRG: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1));
+
+body,
+html {
+    font-family: 'EB Garamond', serif;
+}
+
+.portfolio {
+    color: $colorWhite;
+    background: $colorRG;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+    .photographer2,
+    .photographer3 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav {
+        min-height: 10vh;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px;
+
+        .logo {
+            font-size: 35px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .hamburger {
+            width: 40px;
+            cursor: pointer;
+            z-index: 2;
+
+        }
+
+        .nav-open {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: $colorWhite;
+            z-index: 1;
+            color: #000;
+            display: grid;
+            grid-template-columns: 5% 1fr 1fr 5%;
+            justify-items: center;
+            align-items: center;
+            transform: translateY(-100%);
+
+            .contact {
+                grid-column: 2/3;
+            }
+
+            h3 {
+                font-size: 28px;
+                padding-bottom: 30px;
+
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            .social {
+                a {
+                    margin-right: 20px;
+                    font-size: 30px;
+                    text-decoration: none;
+                    transition: all .3s ease-in-out;
+
+                }
+
+                .fb {
+                    color: #4267B2;
+                }
+
+                .tw {
+                    color: #28AAE1;
+                }
+
+                .git {
+                    color: #24292E;
+                }
+            }
+        }
+    }
+
+    .page {
+        min-height: 90vh;
+        display: grid;
+        grid-template-columns: 5% 1fr 1fr 1fr 5%;
+
+        .details {
+            grid-column: 2/3;
+            align-self: end;
+
+            h1 {
+                font-size: 64px;
+                font-weight: 500;
+            }
+
+            h2 {
+                font-size: 42px;
+                padding: 15px 0;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 24px;
+                padding: 15px 0 50px 0;
+            }
+        }
+
+        .hero {
+            width: 200px;
+            overflow: hidden;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+
+            &:hover {
+                .hero-left {
+                    transform: translateY(0);
+                }
+
+                .hero-right {
+                    transform: translateY(0);
+                }
+
+            }
+
+            img {
+                transition: all .3s ease-in-out;
+                // width: 100%;
+                cursor: pointer;
+
+            }
+
+            .hero-left {
+                transform: translateY(-10%);
+            }
+
+            .hero-right {
+                transform: translateY(10%);
+            }
+        }
+    }
+
+    .pages {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .dot-active {
+            &::before {
+                background: #f36;
+            }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                &::before {
+                    background: #f36;
+                }
+            }
+
+            h1 {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 20px 65px 20px 0;
+
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                right: 5%;
+                transform: translate(-50%, -50%);
+                width: 25px;
+                height: 25px;
+                line-height: 25px;
+                overflow: hidden;
+                border-radius: 50%;
+                background: #eee;
+                transition: all .3s ease-in-out;
+
+            }
+
+        }
+    }
+
+}
