@@ -31,6 +31,9 @@
     -ms-grid-column-span: 1;
     grid-column: 2/3;
     height: auto;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
   .hero img {
     height: 200px;
